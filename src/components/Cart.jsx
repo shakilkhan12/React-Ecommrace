@@ -3,8 +3,9 @@ import StripeCheckout from "react-stripe-checkout"
 import axios from "axios"
 import {cartContext} from "../Global/cartContext"
 
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 const Cart = () => {
    
     const {dispatch, shoppingCart, totalPrice} = useContext(cartContext);
@@ -21,6 +22,9 @@ const Cart = () => {
           if(status === 'success'){
              
               dispatch({type: 'EMPTY'});
+              toast.success("Success Notification !", {
+                position: toast.POSITION.TOP_RIGHT
+              });
 
           } else {
            
