@@ -6,7 +6,7 @@ import {cartContext} from "../Global/cartContext"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 toast.configure();
-const Cart = () => {
+const Cart = (props) => {
    
     const {dispatch, shoppingCart, totalPrice} = useContext(cartContext);
          console.log("Cart data: ",shoppingCart);
@@ -22,6 +22,7 @@ const Cart = () => {
           if(status === 'success'){
              
               dispatch({type: 'EMPTY'});
+              props.history.push(`/`)
               toast.success("Success Notification !", {
                 position: toast.POSITION.TOP_RIGHT
               });
