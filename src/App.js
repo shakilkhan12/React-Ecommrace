@@ -1,24 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './App.css';
+import Navbar from "./components/Navbar"
+import Products from "./components/Products"
+import Cart from "./components/Cart"
+import ProductContextProvider from "./Global/productContext"
+import CartContextProvider from "./Global/cartContext"
 
 function App() {
+  let [cart, setCart] = React.useState(false);
+    const cartToggle = () => {
+          setCart(!cart);
+    }
+ 
+
+  // console.log('Shopping Cart', shoppingCart);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ProductContextProvider>
+      <CartContextProvider>
+      <Router>
+      <Navbar cartToggle={cartToggle} />
+        <Switch>
+          <Route path="/" exact component={Products} />
+          <Route path="/cart" exact component={Cart} />
+        </Switch>
+      </Router>
+      </CartContextProvider>
+      </ProductContextProvider>  
     </div>
   );
 }

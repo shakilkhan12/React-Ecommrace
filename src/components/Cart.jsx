@@ -1,0 +1,77 @@
+import React, {useContext} from "react"
+import StripeCheckout from "react-stripe-checkout"
+import axios from "axios"
+import {cartContext} from "../Global/cartContext"
+
+
+
+const Cart = () => {
+   
+    const {dispatch, shoppingCart, totalPrice} = useContext(cartContext);
+         console.log("Cart data: ",shoppingCart);
+
+    const handleToken = async (token) => {
+
+        const product = {name: 'All Products', price: totalPrice}
+          const response = await axios.post('http://localhost:5000/checkout', {
+              token,
+              product
+          });
+          const {status} = response.data;
+          if(status === 'success'){
+             
+              dispatch({type: 'EMPTY'});
+
+          } else {
+           
+          }
+
+    }
+   
+    return(
+       <div className="cartContainer">
+       <div className="cartDetails">
+        {shoppingCart.map(product => (
+       <div className="cart" key={product.id}>
+        <span className="cartProImage"><img src={product.image} alt=""/></span>
+        <span className="cartProductName">{product.name}</span>
+        <span className="cartProductPrice">${product.price}.00</span>
+        <span className="inc" onClick={() => dispatch({type: 'INC', id:product.id})}>+</span>
+        <span className="productQuantity">{product.qty}</span>
+        <span className="dec" onClick={() => dispatch({type: 'DEC', id: product.id})}>-</span>
+        <span className="productTotalPrice">${product.qty * product.price}.00</span>
+        <button onClick={() => dispatch({type: 'DELETE_PRODUCT', id: product.id})} className="deleteCartPro"><i class="fas fa-trash-alt"></i></button>
+           </div>  
+        ))}
+        </div>
+        {shoppingCart.length > 0 ? <div className="cartSummary">
+            <div className="summary">
+                <h3>Order Summary</h3>
+                <div className="totalItems">
+                    <div className="items">Total Items</div>
+               <div className="itemsCount">{shoppingCart.length}.00</div>
+                </div>
+                <div className="totalPriceSection">
+                 <div className="justTitle">Total Price</div>
+        <div className="itemsPrice">${totalPrice}.00</div>
+                </div>
+       <div className="stripSection">
+       <StripeCheckout
+       stripeKey="pk_test_HnF0cQhq9UGw2GvWRltNiAQM00kn9HlRCg"
+       token={handleToken}
+       billingAddress
+       shippingAddress
+       amount = {totalPrice * 100}
+       name="all products in the cart"
+       />
+       </div>
+       </div></div>
+        : ''}
+      
+       
+       
+</div>
+    )
+}
+
+export default Cart;
