@@ -36,7 +36,7 @@ const Cart = (props) => {
     return(
        <div className="cartContainer">
        <div className="cartDetails">
-        {shoppingCart.map(product => (
+           {shoppingCart.length > 0 ? shoppingCart.map(product => (
        <div className="cart" key={product.id}>
         <span className="cartProImage"><img src={product.image} alt=""/></span>
         <span className="cartProductName">{product.name}</span>
@@ -47,7 +47,8 @@ const Cart = (props) => {
         <span className="productTotalPrice">${product.qty * product.price}.00</span>
         <button onClick={() => dispatch({type: 'DELETE_PRODUCT', id: product.id})} className="deleteCartPro"><i class="fas fa-trash-alt"></i></button>
            </div>  
-        ))}
+        )) : 'Yourr Cart is currently empty!'}
+        
         </div>
         {shoppingCart.length > 0 ? <div className="cartSummary">
             <div className="summary">
