@@ -54,7 +54,7 @@ export const CartReducer = (state, action) => {
         return {shoppingCart: [], totalPrice: 0}
         break;
     default: 
-    return {shoppingCart:[...shoppingCart], totalPrice}
+    return state;
 
     }
     
