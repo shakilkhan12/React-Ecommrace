@@ -8,9 +8,9 @@ const Navbar = ({cartToggle}) => {
         <nav>
  <ul className="left">
  <li><Link to="/">Online Store</Link></li>
- <li><form>
+ {/* <li><form>
      <input type="text" className="search" placeholder="Search Product..."/>
-     </form></li>
+     </form></li> */}
  </ul>
  <ul className="right">
     <li onClick={cartToggle}><Link to="/cart"><span className="dollor"><i className="fas fa-cart-plus"></i></span><span className="shoppingCartTotal">{shoppingCart.length}</span></Link></li>
