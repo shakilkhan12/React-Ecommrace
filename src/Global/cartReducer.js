@@ -7,11 +7,12 @@ export const CartReducer = (state, action) => {
         case 'ADD_TO_CART': 
         const check = shoppingCart.find(cart => cart.id === action.id);
         if(check){
-            return state;
+            // return state;
+            return {shoppingCart: [...shoppingCart], totalPrice, message: 'This is product is already in the cart!'};
         } else {
             product = action.products.find(product => product.id === action.id);
             product['qty'] = 1;
-            return {shoppingCart: [product,...shoppingCart], totalPrice: totalPrice+product.price};
+            return {shoppingCart: [product,...shoppingCart], totalPrice: totalPrice+product.price, message: ''};
         }
         break;
         case 'DELETE_PRODUCT':
@@ -19,7 +20,7 @@ export const CartReducer = (state, action) => {
             product = shoppingCart.find(cart => cart.id === action.id);
             // setAllPrice(allPrice - product.price * product.qty);
             updatedPrice = totalPrice - product.price * product.qty; 
-            return {shoppingCart: [...filtered], totalPrice: updatedPrice}
+            return {shoppingCart: [...filtered], totalPrice: updatedPrice, message: ''}
             break;
         
         case 'INC':
@@ -31,7 +32,7 @@ export const CartReducer = (state, action) => {
             totalPrice = totalPrice + product.price;
             console.log(product, totalPrice);
             shoppingCart[index] = product;
-            return {shoppingCart: [...shoppingCart], totalPrice: totalPrice}
+            return {shoppingCart: [...shoppingCart], totalPrice: totalPrice, message: ''}
             break;
 
         case 'DEC': 
@@ -43,15 +44,14 @@ export const CartReducer = (state, action) => {
        updatedPrice = totalPrice - product.price;
        shoppingCart[index] = product;
        console.log("afer dec",shoppingCart);
-       return {shoppingCart: [...shoppingCart], totalPrice: updatedPrice};
+       return {shoppingCart: [...shoppingCart], totalPrice: updatedPrice, message: ''};
        } else {
-           return {shoppingCart: [...shoppingCart], totalPrice: totalPrice}
+           return {shoppingCart: [...shoppingCart], totalPrice: totalPrice, message: ''}
        }
        break;
 
        case 'EMPTY':
-           console.log('Ruun');
-        return {shoppingCart: [], totalPrice: 0}
+        return {shoppingCart: [], totalPrice: 0, message: ''}
         break;
     default: 
     return state;

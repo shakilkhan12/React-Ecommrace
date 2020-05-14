@@ -8,19 +8,13 @@ import ProductContextProvider from "./Global/productContext"
 import CartContextProvider from "./Global/cartContext"
 
 function App() {
-  let [cart, setCart] = React.useState(false);
-    const cartToggle = () => {
-          setCart(!cart);
-    }
- 
 
-  // console.log('Shopping Cart', shoppingCart);
   return (
     <div>
       <ProductContextProvider>
       <CartContextProvider>
       <Router>
-      <Navbar cartToggle={cartToggle} />
+      <Navbar />
         <Switch>
           <Route path="/" exact component={Products} />
           <Route path="/cart" exact component={Cart} />
