@@ -50,7 +50,7 @@ const Cart = (props) => {
         )) : 'Yourr Cart is currently empty!'}
         
         </div>
-        {shoppingCart.length > 0 ? <div className="cartSummary">
+        {shoppingCart ? <div className="cartSummary">
             <div className="summary">
                 <h3>Order Summary</h3>
                 <div className="totalItems">
