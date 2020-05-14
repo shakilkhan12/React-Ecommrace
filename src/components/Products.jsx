@@ -24,9 +24,8 @@ const Products = ({ error}) => {
                    ${product.price}
                </div>
             </div>
-            <div className="proButton">
-                 {/* <button className="buyNow" onClick={() => addToCart(product.id)}>By Now</button> */}
-                 <button className="buyNow" onClick={() => dispatch({type: 'ADD_TO_CART', id: product.id, products})}>add to cart</button>
+            <div className="proButton" onClick={() => dispatch({type: 'ADD_TO_CART', id: product.id, products})}>
+                 <button className="buyNow" >add to cart</button>
                </div>
                {product.productStatus === 'new' ? <div className="new">New</div>: ''}
                {product.productStatus === 'hot' ? <div className="hot">Hot</div>: ''}
