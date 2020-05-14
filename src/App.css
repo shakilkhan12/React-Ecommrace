@@ -363,7 +363,7 @@ nav ul li .shoppingCartTotal {
 header {
   width: 100%;
   height: 250px;
-  background: url("./assets/bg.jpg");
+  background: url("./assets/bgImage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 70px;
