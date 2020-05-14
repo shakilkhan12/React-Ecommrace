@@ -13,7 +13,7 @@ const Cart = () => {
     const handleToken = async (token) => {
 
         const product = {name: 'All Products', price: totalPrice}
-          const response = await axios.post('http://localhost:5000/checkout', {
+          const response = await axios.post('https://w7gqb.sse.codesandbox.io/checkout', {
               token,
               product
           });
