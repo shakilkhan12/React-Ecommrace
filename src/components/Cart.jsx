@@ -36,7 +36,7 @@ const Cart = (props) => {
     return(
        <div className="cartContainer">
        <div className="cartDetails">
-           {shoppingCart ? shoppingCart.map(product => (
+           {shoppingCart.length ? shoppingCart.map(product => (
        <div className="cart" key={product.id}>
         <span className="cartProImage"><img src={product.image} alt=""/></span>
         <span className="cartProductName">{product.name}</span>
@@ -50,7 +50,7 @@ const Cart = (props) => {
         )) : 'Yourr Cart is currently empty!'}
         
         </div>
-        {shoppingCart ? <div className="cartSummary">
+        {shoppingCart.length ? <div className="cartSummary">
             <div className="summary">
                 <h3>Order Summary</h3>
                 <div className="totalItems">
