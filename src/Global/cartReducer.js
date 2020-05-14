@@ -44,6 +44,8 @@ export const CartReducer = (state, action) => {
        shoppingCart[index] = product;
        console.log("afer dec",shoppingCart);
        return {shoppingCart: [...shoppingCart], totalPrice: updatedPrice};
+       } else {
+           return {shoppingCart: [...shoppingCart], totalPrice: totalPrice}
        }
        break;
 
