@@ -23,7 +23,7 @@ const Cart = (props) => {
              
               dispatch({type: 'EMPTY'});
               props.history.push(`/`)
-              toast.success("Success Notification !", {
+              toast.success("You have paid successfully now you can continue your shopping!", {
                 position: toast.POSITION.TOP_RIGHT
               });
 
