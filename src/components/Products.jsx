@@ -2,14 +2,13 @@ import React, {useContext} from "react"
 import { productContext } from "../Global/productContext"
 import {cartContext} from "../Global/cartContext"
 import Banner from "./Banner"
-const Products = ({ error}) => {
+const Products = () => {
    const {products} = useContext(productContext);
    const {dispatch} = useContext(cartContext);
     return(
         <>
-        {error ? <div className="error">{error}</div> : '' }
-        
-        <div className="products" style={{marginTop: '120px'}}>
+        <Banner />
+        <div className="products" style={{marginTop: '30px'}}>
         {products.map(product => (
             <div className="product" key={product.id}>
               <div className="pro">
