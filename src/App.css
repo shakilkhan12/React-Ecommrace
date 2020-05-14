@@ -213,9 +213,11 @@ nav ul li .shoppingCartTotal {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border: 1px solid #222;
+  border: 1.5px solid rgb(83, 246, 61);
+  color: rgb(83, 246, 61);
   border-radius: 50%;
   cursor: pointer;
+  font-weight: bold;
 }
 .productQuantity {
   display: inline-block;
@@ -230,9 +232,11 @@ nav ul li .shoppingCartTotal {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border: 1px solid #222;
+  border: 1.5px solid rgb(228, 98, 98);
+  color: rgb(228, 98, 98);
   border-radius: 50%;
   cursor: pointer;
+  font-weight: bold;
 }
 .productTotalPrice {
   display: inline-block;
