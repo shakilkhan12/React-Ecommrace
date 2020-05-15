@@ -6,17 +6,17 @@
 
 body {
   font-family: sans-serif;
-  background: #fafafa;
+  background: #ffff;
 }
 
 nav {
   width: 100%;
-  background:indigo;
+  background:#fff;
   height: 70px;
   line-height: 70px;
   position: fixed;
   top:0;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
   padding: 0 103px;
   display: flex;
   z-index: 9999;
@@ -41,22 +41,22 @@ nav .right {
 
 nav ul li {
   display: inline-block;
-  color: #fff;
+  color: #222;
 }
 
 nav ul li a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: #222;
 }
 
 nav ul li .shoppingCartTotal {
   display: inline-block;
   width: 35px;
   height: 35px;
-  background: #fff;
+  background: #f57224;
   border-radius: 50%;
-  color: #333;
+  color: #fff;
   line-height: 35px;
   cursor: pointer;
   text-align: center;
@@ -110,13 +110,14 @@ nav ul li .shoppingCartTotal {
 }
 
 .pro {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
   border-radius: 3px;
   overflow: hidden;
+  background-color: #fafafa;
 }
 
 .productImage {
-  background:#fff;
+  background:#fafafa;
   width: 100%;
   min-height: 200px;
   text-align: center;
@@ -130,7 +131,7 @@ nav ul li .shoppingCartTotal {
 .productDetails {
   padding: 15px 10px;
   text-align: center;
-  background: #fff;
+  background: #fafafa;
   color: #fff;
   color: #222;
 }
@@ -148,7 +149,7 @@ nav ul li .shoppingCartTotal {
 
 .proButton {
   width: 100%;
-  background: indigo;
+  background: #f57224;
   margin: 0 auto;
   text-align: center;
   padding: 14px 0;
@@ -354,6 +355,11 @@ nav ul li .shoppingCartTotal {
   outline: none;
   margin-left: 30px;
   border-radius: 30px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 104px;
 }
 
 header {

@@ -2,6 +2,7 @@ import React from "react"
 
 const Banner = () => {
     return(
+        <div className="container">
         <header style={{marginTop: '70px'}}>
          <div className="headerText">
          <div>
@@ -10,6 +11,7 @@ const Banner = () => {
          </div>
          </div>
         </header>
+        </div>
     )
 }
 
