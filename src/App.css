@@ -244,7 +244,7 @@ nav ul li .shoppingCartTotal {
   width: 150px;
   padding: 0 15px;
   font-weight: bold;
-  color: #999;
+  color: #f57224;
   text-align: center;
 }
 .deleteCartPro {
@@ -286,6 +286,7 @@ nav ul li .shoppingCartTotal {
   width: 50%;
   text-align: right;
   font-weight: bold;
+  color: #f57224;
 }
 .totalPriceSection {
   display: flex;
@@ -300,6 +301,7 @@ nav ul li .shoppingCartTotal {
   font-weight: bold;
   width: 50%;
   text-align: right;
+  color: #f57224;
 }
 .stripSection {
   margin: 15px 0;
@@ -365,7 +367,7 @@ nav ul li .shoppingCartTotal {
 header {
   width: 100%;
   height: 250px;
-  background: url("./assets/bgImage.jpg");
+  background: url("./assets/bbb.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 70px;

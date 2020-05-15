@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure();
 const Cart = (props) => {
    
-    const {dispatch, shoppingCart, totalPrice} = useContext(cartContext);
-         console.log("Cart data: ",shoppingCart);
+    const {dispatch, shoppingCart, totalPrice, qty} = useContext(cartContext);
+         console.log("total qty: ",qty);
 
     const handleToken = async (token) => {
 
@@ -55,7 +55,7 @@ const Cart = (props) => {
                 <h3>Order Summary</h3>
                 <div className="totalItems">
                     <div className="items">Total Items</div>
-               <div className="itemsCount">{shoppingCart.length}.00</div>
+               <div className="itemsCount">{qty}.00</div>
                 </div>
                 <div className="totalPriceSection">
                  <div className="justTitle">Total Price</div>
