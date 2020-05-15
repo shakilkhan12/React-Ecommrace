@@ -32,7 +32,8 @@ nav .left {
 
 nav .left li a {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: bold;
+  color: #f57224;
 }
 
 nav .right {
@@ -122,7 +123,7 @@ nav ul li .shoppingCartTotal {
   min-height: 200px;
   text-align: center;
   overflow: hidden;
-  padding: 10px;
+  /* padding: 10px; */
 }
 .productImage img {
   min-width: 100%;
@@ -131,7 +132,9 @@ nav ul li .shoppingCartTotal {
 .productDetails {
   padding: 15px 10px;
   text-align: center;
-  background: #fafafa;
+  background: #ffff;
+  border-left: 1px solid #fafafa;
+  border-right: 1px solid #fafafa;
   color: #fff;
   color: #222;
 }
@@ -191,6 +194,27 @@ nav ul li .shoppingCartTotal {
   display: inline-block;
   width: 80px;
   height: 80px;
+  position: relative;
+}
+.imageCount {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  background:#f57224;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  visibility: hidden;
+  transition: all .5s;
+}
+.cartProImage:hover .imageCount {
+  visibility: visible;
+  top: 50%;
 }
 .cartProImage img {
   width: 100%;

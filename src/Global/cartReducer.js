@@ -50,7 +50,7 @@ export const CartReducer = (state, action) => {
        console.log("afer dec",shoppingCart);
        return {shoppingCart: [...shoppingCart], totalPrice: updatedPrice, message: '', qty: updatedQty};
        } else {
-           return {shoppingCart: [...shoppingCart], totalPrice: totalPrice, message: ''}
+           return {shoppingCart: [...shoppingCart], totalPrice: totalPrice, message: '', qty: qty}
        }
        break;
 

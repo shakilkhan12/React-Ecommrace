@@ -38,7 +38,9 @@ const Cart = (props) => {
        <div className="cartDetails">
            {shoppingCart.length ? shoppingCart.map(product => (
        <div className="cart" key={product.id}>
-        <span className="cartProImage"><img src={product.image} alt=""/></span>
+        <span className="cartProImage"><img src={product.image} alt=""/>
+           <span className="imageCount">{product.qty}</span>
+        </span>
         <span className="cartProductName">{product.name}</span>
         <span className="cartProductPrice">${product.price}.00</span>
         <span className="inc" onClick={() => dispatch({type: 'INC', id:product.id})}>+</span>
