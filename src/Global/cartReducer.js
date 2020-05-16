@@ -9,7 +9,7 @@ export const CartReducer = (state, action) => {
         const check = shoppingCart.find(cart => cart.id === action.id);
         if(check){
             // return state;
-            return {shoppingCart: [...shoppingCart], totalPrice, message: 'This is product is already in the cart!'};
+            return {shoppingCart: [...shoppingCart], totalPrice, message: 'This is product is already in the cart!', qty};
         } else {
             product = action.products.find(product => product.id === action.id);
             product['qty'] = 1;

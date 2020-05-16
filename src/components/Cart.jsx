@@ -43,9 +43,9 @@ const Cart = (props) => {
         </span>
         <span className="cartProductName">{product.name}</span>
         <span className="cartProductPrice">${product.price}.00</span>
-        <span className="inc" onClick={() => dispatch({type: 'INC', id:product.id})}>+</span>
+        <span className="inc" onClick={() => dispatch({type: 'INC', id:product.id})}><i className="fas fa-plus"></i></span>
         <span className="productQuantity">{product.qty}</span>
-        <span className="dec" onClick={() => dispatch({type: 'DEC', id: product.id})}>-</span>
+        <span className="dec" onClick={() => dispatch({type: 'DEC', id: product.id})}><i className="fas fa-minus"></i></span>
         <span className="productTotalPrice">${product.qty * product.price}.00</span>
         <button onClick={() => dispatch({type: 'DELETE_PRODUCT', id: product.id})} className="deleteCartPro"><i className="fas fa-trash-alt"></i></button>
            </div>  

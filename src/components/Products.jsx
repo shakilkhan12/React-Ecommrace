@@ -20,7 +20,7 @@ const Products = () => {
                  <h4>{product.name}</h4>
                 </div>
                <div className="proPrice">
-                   ${product.price}
+                   ${product.price}.00
                </div>
             </div>
             <div className="proButton" onClick={() => dispatch({type: 'ADD_TO_CART', id: product.id, products})}>

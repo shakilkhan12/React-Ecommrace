@@ -7,6 +7,7 @@
 body {
   font-family: sans-serif;
   background: #ffff;
+  font-family: 'Lato', sans-serif;
 }
 
 nav {
@@ -147,7 +148,8 @@ nav ul li .shoppingCartTotal {
 .proPrice {
   margin: 15px 0;
   color:orangered;
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: 30;
 }
 
 .proButton {
@@ -181,6 +183,8 @@ nav ul li .shoppingCartTotal {
 
 .cartDetails {
   width: 75%;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
 }
 
 .cart {
@@ -238,11 +242,11 @@ nav ul li .shoppingCartTotal {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border: 1.5px solid rgb(83, 246, 61);
-  color: rgb(83, 246, 61);
+  border: 1.1px solid orangered;
+  color: orangered;
   border-radius: 50%;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
 }
 .productQuantity {
   display: inline-block;
@@ -257,11 +261,11 @@ nav ul li .shoppingCartTotal {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border: 1.5px solid rgb(228, 98, 98);
+  border: 1.1px solid rgb(228, 98, 98);
   color: rgb(228, 98, 98);
   border-radius: 50%;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
 }
 .productTotalPrice {
   display: inline-block;
@@ -419,6 +423,8 @@ header .headerText {
 header h1 {
   margin-bottom: 7px;
   font-size: 35px;
+  text-transform: uppercase;
+  color:#ffff;
 }
 
 
