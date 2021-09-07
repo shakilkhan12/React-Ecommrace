@@ -20,6 +20,7 @@ function App() {
  useEffect(() => {
    fetchUsers();
  }, [])
+ console.log('Hello app component!')
   return (
     <div>
       <ProductContextProvider>
