@@ -10,21 +10,12 @@ import CartContextProvider from "./Global/cartContext"
 
 function App() {
   const fetchUsers = async () => {
-<<<<<<< HEAD
-    try {
-     const {data} = await axios.get("/.netlify/functions/users");
-    console.log('Your users: ', JSON.parse(data));
-    } catch(err => {
-      console.log(err)
-    })
-=======
      try {
       const {data} = await axios.get("/.netlify/functions/users");
       console.log('Your users: ', data);
      } catch (error) {
        console.log('your errors: ', error)
      }
->>>>>>> d7de2c1da1ade1fcff8966c589ddf850ad4b6f7f
   }
  useEffect(() => {
    fetchUsers();
