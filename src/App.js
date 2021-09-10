@@ -13,7 +13,7 @@ function App() {
 		try {
 			const res = await fetch('/.netlify/functions/users');
 			// const data = await res.json();
-			console.log('res: ', data);
+			console.log('res: ', res);
 		} catch (error) {
 			console.log('your errors: ', error);
 		}
