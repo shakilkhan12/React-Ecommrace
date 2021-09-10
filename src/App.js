@@ -15,7 +15,7 @@ function App() {
 			const data = await res.json();
 			console.log('res: ', data);
 		} catch (error) {
-			console.log('your errors: ', error.response.data);
+			console.log('your errors: ', error);
 		}
 	};
 	useEffect(() => {
