@@ -12,7 +12,7 @@ function App() {
   const fetchUsers = async () => {
     try {
      const {data} = await axios.get("/.netlify/functions/users");
-    console.log('Your users: ', data);
+    console.log('Your users: ', JSON.parse(data));
     } catch(err => {
       console.log(err)
     })
