@@ -12,8 +12,8 @@ function App() {
 	const fetchUsers = async () => {
 		try {
 			const res = await fetch('/.netlify/functions/users');
-			// const data = await res.json();
-			console.log('res: ', res);
+			const data = await res.json();
+			console.log('res: ', data);
 		} catch (error) {
 			console.log('your errors: ', error);
 		}
