@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "netlify-cli": "^6.8.6",
     "netlify-lambda": "^2.0.14",
     "react": "^16.13.1",
